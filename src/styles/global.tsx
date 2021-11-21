@@ -15,10 +15,14 @@ export default createGlobalStyle`
         color: white;
         height: 100vh;
         font-family: 'Red Hat Display', sans-serif;
+        text-decoration: none;
+
     }
 
     input, button {
         font-size: 16px;
+
+
     }
 
     h1, h2, h3, h4, h5, h6, strong {
@@ -33,8 +37,11 @@ export default createGlobalStyle`
         cursor: pointer;
         font-family: 'Red Hat Display', sans-serif;
     }
+    a{
+        text-decoration: none;
 
-    a {
+    }
+    Link{
         text-decoration: none;
     }
 

@@ -5,9 +5,7 @@ export const Header = styled.header`
   justify-content: space-between;
   align-items: center;
   padding: 5px 24px;
-  background-color: black;
-  border-bottom-left-radius: 50px;
-  border-bottom-right-radius: 50px;
+
   color: white;
   span {
     font-weight: 700;
@@ -20,17 +18,16 @@ export const Header = styled.header`
     }
   }
   div {
-    button:not(:first-child) {
-      margin-left: 12px;
-    }
+    display: flex;
+    align-items: center;
+    justify-content: center;
 
-    button {
-      padding: 5px;
-      text-transform: capitalize;
-      font-size: 1rem;
-      font-weight: 700;
-      border: none;
-      border-radius: 5px;
+    .signup {
+      background-color: #e6ae14;
+      color: white;
+      width: 100px;
+      height: 30px;
+      border-radius: 10px;
     }
   }
 `;
@@ -38,7 +35,7 @@ export const Header = styled.header`
 const FromLeft = keyframes`
   from{
     opacity:0;
-    transform:translateX(-50px);
+    transform:translateX(-100px);
   }
   to{
     opacity:1;
@@ -62,7 +59,7 @@ export const Functionalities = styled.section`
   justify-content: center;
   align-items: center;
   padding: 30px;
-  color: black;
+  color: white;
   text-align: center;
   .func__col-1 {
     display: flex;
@@ -92,18 +89,19 @@ export const Functionalities = styled.section`
     h2 {
       font-size: 1.8rem;
       font-weight: 700;
-      color: #131313;
+      color: #ffff;
       text-shadow: 3px 3px 3px rgba(150, 150, 150, 1);
     }
 
     button {
+      text-decoration: none;
       padding: 8px 12px;
       text-transform: capitalize;
       font-size: 1.3rem;
       font-weight: 700;
       border: none;
       border-radius: 5px;
-      background-color: #2f7475;
+      background-color: #71b3b3;
       color: #fff;
       transition: all 0.4s linear;
       box-shadow: 6px 6px 5px 0px rgba(54, 54, 54, 0.75);
@@ -133,8 +131,13 @@ export const Voluntaries = styled.section`
   padding: 94px 30px 160px;
   margin-bottom: -120px;
   font-size: 1rem;
-  background-color: #c1a487;
-  color: #000;
+  background: linear-gradient(
+    90deg,
+    #59a5a5 26.74%,
+    #3f8e8e 72.27%,
+    #227475 98.23%
+  );
+  color: white;
   clip-path: polygon(0 0, 100% 9%, 100% 100%, 0 91%);
   .InformationsCards {
     margin: 24px 0 0 0;
@@ -154,13 +157,13 @@ export const InformationCard = styled.div`
   justify-content: center;
   align-items: center;
   text-align: center;
-  color: #222222;
-  text-shadow: 3px 3px 3px rgba(150, 150, 150, 1);
+  color: #227475;
+  text-shadow: 1px 2px 3px rgba(150, 150, 150, 1);
   font-weight: 900;
   width: 200px;
   height: 300px;
   padding: 5px;
-  background-color: #cfbfa6;
+  background-color: #ffffff;
   border-radius: 5px;
   box-shadow: 6px 6px 5px 0px rgba(54, 54, 54, 0.75);
   -webkit-box-shadow: 6px 6px 5px 0px rgba(54, 54, 54, 0.75);
@@ -184,7 +187,12 @@ export const Institutions = styled.section`
   align-items: center;
   margin-top: -110px;
   padding: 120px 0 50px;
-  background-color: #59a5a5;
+  background: linear-gradient(
+    117.06deg,
+    #59a5a5 26.74%,
+    #3f8e8e 72.27%,
+    #227475 98.23%
+  );
   color: black;
   clip-path: polygon(0 11%, 100% 0, 100% 100%, 0% 100%);
 
@@ -207,14 +215,14 @@ export const Institutions = styled.section`
     font-weight: 700;
     border: none;
     border-radius: 5px;
-    background-color: goldenrod;
+    background-color: #fcbe14;
     color: #fff;
     transition: all 0.4s linear;
     box-shadow: 6px 6px 5px 0px rgba(54, 54, 54, 0.75);
     -webkit-box-shadow: 6px 6px 5px 0px rgba(54, 54, 54, 0.75);
     -moz-box-shadow: 6px 6px 5px 0px rgba(54, 54, 54, 0.75);
     :hover {
-      background-color: #e4c518;
+      background-color: #e6ae14;
     }
   }
 `;
@@ -226,10 +234,9 @@ export const InstitutionsCard = styled.div`
   justify-content: center;
   align-items: center;
   text-align: center;
-  text-shadow: 3px 3px 3px rgba(150, 150, 150, 1);
   width: 250px;
   height: 250px;
-  background-color: goldenrod;
+  background-color: white;
   border-radius: 100%;
   box-shadow: 6px 6px 5px 0px rgba(54, 54, 54, 0.75);
   -webkit-box-shadow: 6px 6px 5px 0px rgba(54, 54, 54, 0.75);
@@ -248,6 +255,24 @@ export const Footer = styled.footer`
   padding: 5px 10px;
   justify-content: center;
   align-items: center;
-  background-color: black;
+  background-color: #227475;
   color: white;
+`;
+
+export const Buttons = styled.div`
+  width: 80px;
+  border: none;
+  color: #e6ae14;
+  font-weight: bold;
+  font-size: 1.2rem;
+  cursor: pointer;
+`;
+
+export const Container = styled.div`
+  background: linear-gradient(
+    117.06deg,
+    #59a5a5 26.74%,
+    #3f8e8e 72.27%,
+    #227475 98.23%
+  );
 `;

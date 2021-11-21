@@ -6,6 +6,8 @@ import {
   Institutions,
   InstitutionsCard,
   Footer,
+  Buttons,
+  Container,
 } from "./styles";
 import logo from "../../Assets/img/logo.png";
 import events from "../../Assets/img/events.svg";
@@ -14,30 +16,34 @@ import search from "../../Assets/img/search.svg";
 import instsearch from "../../Assets/img/instsearch.svg";
 import instevent from "../../Assets/img/instevent.svg";
 import instdonation from "../../Assets/img/instdonation.svg";
-import { Link, useHistory } from "react-router-dom";
+import { useHistory } from "react-router-dom";
+import homeimage from "../../Assets/img/idosos.png";
+
 export const LandingPage = () => {
   const history = useHistory();
+
   return (
-    <>
+    <Container>
       <Header>
         <span>
           <img src={logo} alt="" />
         </span>
         <div>
-          <button>
-            <Link to="/login-voluntary">Entrar</Link>
-          </button>
-          <button>
-            <Link to="/signup-voluntary">Cadastrar</Link>
-          </button>
+          <Buttons onClick={() => history.push("/login-voluntary")}>
+            Entrar
+          </Buttons>
+
+          <Buttons
+            className="signup"
+            onClick={() => history.push("/signup-voluntary")}
+          >
+            Cadastrar
+          </Buttons>
         </div>
       </Header>
       <Functionalities>
         <div className="func__col-1">
-          <img
-            src="http://recantoidosoaraxa-com-br.umbler.net/wp-content/uploads/2020/03/3-Desenho-Idosos.png"
-            alt=""
-          />
+          <img src={homeimage} alt="idosos" />
         </div>
         <div className="func__col-2">
           <h1>
@@ -91,6 +97,6 @@ export const LandingPage = () => {
       <Footer>
         <span>@ACME 2021 - All Rights Reserved</span>
       </Footer>
-    </>
+    </Container>
   );
 };
